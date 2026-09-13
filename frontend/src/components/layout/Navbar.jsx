@@ -19,7 +19,7 @@ const Navbar = () => {
         <Link to="/rent" className={`nav-links ${isActive('/rent')}`}>Rent</Link>
         <Link to="/projects" className={`nav-links ${isActive('/projects')}`}>Projects</Link>
         <Link to="/saved" className={`nav-links ${isActive('/saved')}`}>Saved</Link>
-        <span className="nav-links disabled">Insights</span>
+        <Link to="/insights" className={`nav-links ${isActive('/insights')}`}>Insights</Link>
       </div>
       
       <div className="user-area">

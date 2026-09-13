@@ -8,6 +8,7 @@ import ListingDetail from './pages/ListingDetail';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
 import Saved from './pages/Saved';
+import Insights from './pages/Insights';
 
 // A layout wrapper that includes the Navbar for protected routes
 const AppLayout = ({ children }) => {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/saved" element={<AppLayout><Saved /></AppLayout>} />
             <Route path="/listing/:id" element={<AppLayout><ListingDetail /></AppLayout>} />
             <Route path="/project/:id" element={<AppLayout><ProjectDetail /></AppLayout>} />
+            <Route path="/insights" element={<AppLayout><Insights /></AppLayout>} />
           </Route>
         </Routes>
       </AuthProvider>
