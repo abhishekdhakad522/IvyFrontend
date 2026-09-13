@@ -3,14 +3,15 @@
   background-color: var(--color-surface);
   box-shadow: var(--shadow-sm);
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-area {
   display: flex;
   align-items: center;
   gap: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 .logo-text {
@@ -25,4 +26,42 @@
   font-size: 0.9rem;
   color: var(--color-text-light);
   cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-links:hover {
+  color: var(--color-text);
+}
+
+.nav-links.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.nav-links.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-email {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.logout-btn {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  transition: color 0.2s;
+}
+
+.logout-btn:hover {
+  color: var(--color-error);
 }
