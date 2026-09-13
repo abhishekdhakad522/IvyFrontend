@@ -1,0 +1,28 @@
+.navbar {
+  padding: 1.25rem 2rem;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-text {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-right: 1rem;
+}
+
+.nav-links {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+}

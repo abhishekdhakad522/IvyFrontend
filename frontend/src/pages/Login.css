@@ -1,0 +1,124 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+}
+
+.login-content-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.login-card {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  min-height: 500px;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Left side */
+.login-left {
+  flex: 1;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-wrapper {
+  margin-bottom: 3rem;
+}
+
+.reference-text {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.login-heading {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: white;
+  font-weight: 500;
+}
+
+.login-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-top: auto;
+}
+
+/* Right side */
+.login-right {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-text {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.subtitle-text {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-btn {
+  margin-top: 1rem;
+}
+
+.error-message {
+  background-color: #fef2f2;
+  color: var(--color-error);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  border: 1px solid #fecaca;
+}
+
+/* Footer */
+.login-footer {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: var(--color-text-light);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+  }
+  
+  .login-left, .login-right {
+    padding: 2rem;
+  }
+}
