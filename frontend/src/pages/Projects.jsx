@@ -1,7 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { apiClient } from '../api/apiClient';
 import { formatCurrency } from '../utils/dataSanitizer';
 import Button from '../components/ui/Button';
+
+// Using random image logic
+import imgMorning from '../assets/home-morning.jpg';
+import imgNorth from '../assets/home-north.jpg';
+import imgSunset from '../assets/home-sunset.jpg';
+import imgWarm from '../assets/home-warm.jpg';
+
+const images = [imgMorning, imgNorth, imgSunset, imgWarm];
+const getImage = (id) => {
+  if (!id) return images[0];
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) {
+    hash = id.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return images[Math.abs(hash) % images.length];
+};
 
 // A simple project card component inline
 const ProjectCard = ({ project }) => {
@@ -17,8 +34,13 @@ const ProjectCard = ({ project }) => {
     return `₹${price} L`;
   };
 
+  const navigate = useNavigate();
+
   return (
-    <div className="listing-card">
+    <div className="listing-card" onClick={() => navigate(`/project/${project.project_id}`)} style={{ cursor: 'pointer' }}>
+      <div className="listing-image-container">
+        <img src={getImage(project.project_id)} alt={project.apartment_name} className="listing-image" />
+      </div>
       <div className="listing-content">
         <div className="listing-header">
           <span className="listing-subtitle">{project.developer_name?.toUpperCase()} · {project.locality?.toUpperCase()}</span>
